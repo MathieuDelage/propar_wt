@@ -39,6 +39,7 @@ class DBTools
 
     public static function addOperation(DateTime $date_begin, String $comment, Int $typeOperation_id, Int $customers_id)
     {
+        $date_begin = new DateTime('2020-09-01', new DateTimeZone('Europe/Paris'));
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("INSERT INTO operation (date_begin, comment, typeOperation_id, customers_id) VALUES ( :date_begin, :comment, :typeOperation_id, :customers_id)");
         $req->execute(array(
@@ -89,10 +90,9 @@ class DBTools
     public static function updateOperation(Int $id, DateTime $date_begin, String $comment, Int $typeOperation_id, Int $customers_id)
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("UPDATE operation SET date_begin = :newDate_begin, comment = :newComment, typeOperation_id = :newTypeOperation_id, customers_id = :newCustomers_id WHERE id = :id");
+        $req = $db->prepare("UPDATE operation SET comment = :newComment, typeOperation_id = :newTypeOperation_id, customers_id = :newCustomers_id WHERE id = :id");
         $req->execute(array(
             ':id' => $id,
-            ':newDate_begin' => $date_begin->format('Y-m-d'),
             ':newComment' => $comment,
             ':newTypeOperation_id' => $typeOperation_id,
             ':newCustomers_id' => $customers_id
@@ -134,8 +134,9 @@ class DBTools
         ));
     }
 
-    public static function terminateOperation(Int $id, DateTime $date_end)
+    public static function terminateOperation(Int $id)
     {
+        $date_end = new DateTime('now', new DateTimeZone('Europe/Paris'));
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("UPDATE operation SET date_end = :date_end WHERE id = :id");
         $req->execute(array(
@@ -185,7 +186,7 @@ class DBTools
     public static function viewTerminatedOperations()
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT operation.date_begin, operation.date_end, operation.comment, customers.name, customers.surname, customers.company, workers.name, workers.surname, workers.grade, typeoperation.type
+        $req = $db->prepare("SELECT operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client, CONCAT(workers.name, ' ', workers.surname, ', ', workers.grade) AS worker, typeoperation.type
             FROM operation 
             INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
             INNER JOIN workers ON operation.workers_id = workers.id 

@@ -15,7 +15,6 @@ include_once '../model/lib/DBTools.class.php';
 
 // test AddOperation()
 // OK
-// $date = new DateTime('2020-09-01', new DateTimeZone('Europe/Paris'));
 // DBTools::addOperation( $date, 'Ceci est un test !', '3','1');
 
 // test updateWorker()
@@ -32,8 +31,7 @@ include_once '../model/lib/DBTools.class.php';
 
 // test updateOperation()
 // OK
-// $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
-// DBTools::updateOperation(1,$date, 'Ceci est un autre test !', '1','1');
+// DBTools::updateOperation(1, 'Ceci est un autre test !', '1','1');
 
 // test deleteWorker()
 // OK
@@ -53,8 +51,7 @@ include_once '../model/lib/DBTools.class.php';
 
 // test terminateOperation()
 // OK
-// $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
-// DBTools::terminateOperation(2, $date);
+// DBTools::terminateOperation(1, $date);
 
 // test viewCA()
 // OK
