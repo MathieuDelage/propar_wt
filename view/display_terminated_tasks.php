@@ -14,19 +14,20 @@
 <body id="terminatedTasks">
     <table id="terminatedTasks_datatable" class="display">
         <thead>
-        <tr>
-            <th>Client</th>
-            <th>Commentaire</th>
-            <th>Employé</th>
-            <th>Type</th>
-            <th>Date d'enregistrement</th>
-            <th>Date de complétion</th>
-        </tr>
+            <tr>
+                <th>Client</th>
+                <th>Commentaire</th>
+                <th>Employé</th>
+                <th>Type</th>
+                <th>Date d'enregistrement</th>
+                <th>Date de complétion</th>
+            </tr>
         </thead>
         <tbody id="terminatedTasks_DT">
 
         </tbody>
-</table>
+    </table>
+<a href="index.php">Retour au menu</a>
 </body>
 
 <!-- JQuery -->

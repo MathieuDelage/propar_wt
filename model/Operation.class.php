@@ -6,8 +6,6 @@ class Operation{
     private $date_end;
     private $comment;
     private $id_worker;
-    private $id_customer;
-    private $id_TypeOperation
 
     public function __construct( DateTime $date_begin, DateTime $date_end, String $comment)
     {
