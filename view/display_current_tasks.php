@@ -25,6 +25,7 @@
 
             </tbody>
         </table>
+        <a href="index.php">Retour au menu</a>
     </body>
 
     <!-- JQuery -->
