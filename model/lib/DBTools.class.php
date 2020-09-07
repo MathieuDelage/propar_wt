@@ -37,7 +37,7 @@ class DBTools
         ));
     }
 
-    public static function addOperation(DateTime $date_begin, String $comment, Int $typeOperation_id, Int $customers_id)
+    public static function addOperation(String $comment, Int $typeOperation_id, Int $customers_id)
     {
         $date_begin = new DateTime('2020-09-01', new DateTimeZone('Europe/Paris'));
         $db = Singleton::getInstance()->getConnection();
@@ -173,11 +173,11 @@ class DBTools
     public static function viewCurrentOperationsWithoutWorker()
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT operation.date_begin, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
+        $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
             FROM operation 
             INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
             INNER JOIN customers ON operation.customers_id = customers.id
-            WHERE date_end IS NULL");
+            WHERE date_end IS NULL AND workers_id IS NULL");
         $req->execute();
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -283,4 +283,75 @@ class DBTools
         ));
         return $req->fetchAll();
     }
+
+    public static function getCustomers()
+    {
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT id, name, surname, company FROM customers");
+        $req->execute(array(
+        ));
+        return $req->fetchAll();
+    }
+
+    public static function getTypeOperation()
+    {
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT id, type, price FROM typeoperation");
+        $req->execute(array(
+        ));
+        return $req->fetchAll();
+    }
+
+    public static function getOperation(Int $id)
+    {
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT operation.date_begin, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
+            FROM operation 
+            INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
+            INNER JOIN customers ON operation.customers_id = customers.id
+            WHERE date_end IS NULL AND operation.id = :id");
+        $req->execute(array(
+            ':id' => $id
+        ));
+        $result = $req->fetchAll();
+        return $result;
+    }
+
+    public static function takeOperation(Int $id, Int $workers_id)
+    {
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("UPDATE operation SET workers_id = :workers_id WHERE id = :id");
+        $req->execute(array(
+            ':id' => $id,
+            ':workers_id' => $workers_id
+        ));
+    }
+
+    public static function displayMyOperations($id){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
+            FROM operation 
+            INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
+            INNER JOIN customers ON operation.customers_id = customers.id
+            WHERE workers_id = :id");
+        $req->execute(array(
+            ':id' => $id,
+        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function displayMyCurrentOperations($id){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
+            FROM operation 
+            INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
+            INNER JOIN customers ON operation.customers_id = customers.id
+            WHERE workers_id = :id AND operation.date_end IS NULL");
+        $req->execute(array(
+            ':id' => $id,
+        ));
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
 }

@@ -7,5 +7,8 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="jquery.dataTables" level="application" />
     <orderEntry type="library" name="malihu-custom-scrollbar-plugin" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="solid" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
   </component>
 </module>

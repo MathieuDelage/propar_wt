@@ -1,0 +1,8 @@
+<?php
+session_start();
+include_once '../model/lib/DBTools.class.php';
+
+if (isset($_POST['id_operation'])){
+    DBTools::terminateOperation($_POST['id_operation']);
+    echo json_encode("Opération cloturée !");
+}

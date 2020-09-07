@@ -19,7 +19,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="" />
+    <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ctrl/add_customer.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/add_operation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/add_typeOperation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/add_worker.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/display_ca.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/display_myCurrentOperations.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/display_myOperations.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/get_customers.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/get_operation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/get_typeOperation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/take_operation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ctrl/terminate_operation.action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/add_customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/add_operation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/add_typeOperation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/add_worker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/display_myOperations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/add_customer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/add_operation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/add_typeOperation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/add_worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/display_myOperations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/take_operation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/terminate_operation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/take_operation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/terminate_operation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/propar_wt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/propar_wt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/logout.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/logout.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/test.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/test.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/lib/DBTools.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/lib/DBTools.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/css/propar.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/propar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/menu.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +68,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/model/lib/DBTools.class.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1h2r5stuZKyEHdXXKs68jE7oOHD" />
   <component name="ProjectLevelVcsManager">
@@ -44,6 +85,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TP_global\propar_wt\view\js" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +98,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599219847216</updated>
-      <workItem from="1599219848292" duration="8815000" />
+      <workItem from="1599219848292" duration="8869000" />
+      <workItem from="1599462808503" duration="22274000" />
     </task>
     <servers />
   </component>
@@ -69,15 +116,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2609" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599222845347">
+    <state x="2609" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599465921500">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2609" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599222845347" />
-    <state x="2715" y="443" key="NewPhpFileDialog" timestamp="1599227190479">
+    <state x="2609" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599465921500" />
+    <state x="2715" y="443" key="NewPhpFileDialog" timestamp="1599482769027">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2715" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599227190479" />
+    <state x="2715" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599482769027" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599488747471">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599488747471" />
   </component>
 </project>
