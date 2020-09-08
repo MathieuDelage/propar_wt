@@ -1,11 +1,4 @@
 /*
- * Datatable
- */
-$('#terminatedTasks').ready( function () {
-    $('#terminatedTasks_datatable').DataTable();
-} );
-
-/*
  * Récupère les tâche terminées
  */
 

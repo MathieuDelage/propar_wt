@@ -54,12 +54,13 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Formulaire</h6> -->
-
-                        <div class="collapse-item">Identifiant :</div>
-                        <div class="collapse-item"><input type="text" id="username" name="username"></div>
-                        <div class="collapse-item">Mot de passe :</div>
-                        <div class="collapse-item"><input type="text" id="password" name="password"></div>
-                        <div class="collapse-item"><input id="loginButton" type="submit" value="Connexion"></div>
+                        <form method="post" action="login.php">
+                            <div class="collapse-item">Identifiant :</div>
+                            <div class="collapse-item"><input type="text" id="connexion_username" name="username"></div>
+                            <div class="collapse-item">Mot de passe :</div>
+                            <div class="collapse-item"><input type="password" id="connexion_password" name="password"></div>
+                            <div class="collapse-item"><input id="connexion_submit" type="submit" value="Connexion"></div>
+                        </form>
 
                     </div>
                 </div>
@@ -78,20 +79,6 @@
 
                     <!-- Topbar Navbar -->
                     <ul  class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span id="userDisplayTop" class="mr-2 d-none d-lg-inline text-gray-600 small">Invité</span>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </div>
-                        </li>
                     </ul>
 
                 </nav>
@@ -187,6 +174,7 @@
 
     <!-- Custom JS -->
     <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

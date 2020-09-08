@@ -13,7 +13,7 @@ $(document).ready(function(){
         function(data){
             let operations = JSON.parse(data);
             for(let i = 0; i < operations.length; i++){
-                $("#take_operation_select").append($('<option>').val(operations[i]['id']).text(operations[i]['id']));
+                $("#take_operation_select").append($('<option>').val(operations[i]['id']).text("Tâche n°" + operations[i]['id']));
             }
         }
     );

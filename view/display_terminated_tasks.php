@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
         <!-- Custom styles for this template-->
-        <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
     </head>
     <body id="page-top">
     <!-- Page Wrapper -->
@@ -43,7 +43,7 @@
                         <h6 class="collapse-header">Retour à l'accueil :</h6>
                         <a class="collapse-item" href="index.php">Accueil</a>
                         <h6 class="collapse-header">Opération :</h6>
-                        <a class="collapse-item" href="">Terminées</a>
+                        <a class="collapse-item" href="display_current_tasks.php">En cours</a>
                     </div>
                 </div>
             </li>
@@ -55,14 +55,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- <h6 class="collapse-header">Formulaire</h6> -->
-
-                        <div class="collapse-item">Identifiant :</div>
-                        <div class="collapse-item"><input type="text" id="username" name="username"></div>
+                        <<div class="collapse-item">Identifiant :</div>
+                        <div class="collapse-item"><input type="text" id="connexion_username" name="username"></div>
                         <div class="collapse-item">Mot de passe :</div>
-                        <div class="collapse-item"><input type="text" id="password" name="password"></div>
-                        <div class="collapse-item"><input id="loginButton" type="submit" value="Connexion"></div>
-
+                        <div class="collapse-item"><input type="password" id="connexion_password" name="password"></div>
+                        <div class="collapse-item"><input id="connexion_submit" type="submit" value="Connexion"></div>
                     </div>
                 </div>
             </li>
@@ -81,22 +78,6 @@
                     <!-- Topbar Navbar -->
 
                     <ul class="navbar-nav ml-auto">
-
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span id="userDisplayTop" class="mr-2 d-none d-lg-inline text-gray-600 small">Invité</span>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    <span id="userLogout">Logout</span>
-                                </a>
-                            </div>
-                        </li>
-
                     </ul>
                 </nav>
 
@@ -107,7 +88,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Opérations en cours</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Opérations terminées</h1>
                     </div>
                 </div>
             </div>
@@ -120,7 +101,7 @@
                             <thead>
                             <tr>
                                 <th>Client</th>
-                                <th>Comentaire</th>
+                                <th>Commentaire</th>
                                 <th>Employé</th>
                                 <th>Type</th>
                                 <th>Date de début</th>
@@ -130,14 +111,14 @@
                             <tfoot>
                             <tr>
                                 <th>Client</th>
-                                <th>Comentaire</th>
+                                <th>Commentaire</th>
                                 <th>Employé</th>
                                 <th>Type</th>
                                 <th>Date de début</th>
                                 <th>Date de fin</th>
                             </tr>
                             </tfoot>
-                            <tbody id="current_tasks_DT">
+                            <tbody id="terminatedTasks_DT">
 
                             </tbody>
                         </table>
@@ -152,43 +133,6 @@
 
     </div>
     <!-- End of Page Wrapper -->
-    </body>
-    <body id="terminatedTasks">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand navbar-dark bg-primary"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-                <form class="form-inline my-2 my-md-0"> </form>
-            </div>
-        </nav>
-        <!-- End of Navbar -->
-        <div id="wrapper" class="toggled">
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li> <a href="index.php">Retour au menu</a> </li>
-                    <li> <a href="login.php">Connexion</a> </li>
-                    <li> <a href="display_current_tasks.php">Tâches en cours</a> </li>
-                </ul>
-            </div> <!-- /#sidebar-wrapper -->
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <table id="terminatedTasks_datatable" class="display">
-                    <thead>
-                    <tr>
-                        <th>Client</th>
-                        <th>Commentaire</th>
-                        <th>Employé</th>
-                        <th>Type</th>
-                        <th>Date d'enregistrement</th>
-                        <th>Date de complétion</th>
-                    </tr>
-                    </thead>
-                    <tbody id="terminatedTasks_DT">
-
-                    </tbody>
-                </table>
-            </div> <!-- /#page-content-wrapper -->
-        </div> <!-- /#wrapper -->
     </body>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -206,6 +150,7 @@
 
     <!-- Custom JS -->
     <script src="js/display_terminated_tasks.js"></script>
+    <script src="js/events.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>

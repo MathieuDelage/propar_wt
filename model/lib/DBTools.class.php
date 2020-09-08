@@ -216,25 +216,13 @@ class DBTools
     public static function logIn(String $login, String $password)
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT login FROM workers WHERE login = :login");
+        $req = $db->prepare("SELECT login, password  FROM workers WHERE login = :login");
         $req->execute(array(
             ':login' => $login
         ));
-        $loginExist = $req->fetchAll();
-        if (empty($loginExist)) {
-            return 'Login inexistant';
-        } else {
-            $db = Singleton::getInstance()->getConnection();
-            $req = $db->prepare("SELECT login, password  FROM workers WHERE login = :login");
-            $req->execute(array(
-                ':login' => $login
-            ));
-            $result = $req->fetchAll();
-            if ( $login == $result[0]['login'] && password_verify($password, $result[0]['password']) ){
-                return true;
-            } else {
-                return 'Mot de passe incorrect';
-            }
+        $result = $req->fetchAll();
+        if ( $login == $result[0]['login'] && password_verify($password, $result[0]['password']) ){
+            return 'Login';
         }
     }
 
@@ -357,21 +345,11 @@ class DBTools
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("SELECT count(*)
             FROM operation 
-            WHERE workers_id = :id");
+            WHERE workers_id = :id AND date_end IS NULL");
         $req->execute(array(
             ':id' => $id,
         ));
         return $req->fetch();
     }
 
-    public static function searchLogin($login){
-        $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT count(*)
-            FROM workers 
-            WHERE login = :login");
-        $req->execute(array(
-            'login' => $login,
-        ));
-        return $req->fetch();
-    }
 }
