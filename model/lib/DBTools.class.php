@@ -317,7 +317,7 @@ class DBTools
 
     public static function displayMyOperations($id){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
+        $req = $db->prepare("SELECT operation.id, operation.date_begin, IFNULL(operation.date_end, 'En cours') AS date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
             FROM operation 
             INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
             INNER JOIN customers ON operation.customers_id = customers.id
@@ -325,7 +325,7 @@ class DBTools
         $req->execute(array(
             ':id' => $id,
         ));
-        return $req->fetchAll(PDO::FETCH_ASSOC);
+        return $req->fetchAll();
     }
 
     public static function displayMyCurrentOperations($id){

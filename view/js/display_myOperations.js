@@ -1,9 +1,3 @@
-/*
- * Datatable
- */
-$('#display_myOperation').ready( function () {
-    $('#display_myOperation_datatable').DataTable();
-} );
 
 $.post(
     '../ctrl/display_myOperations.action.php',

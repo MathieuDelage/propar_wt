@@ -1,5 +1,5 @@
 <?php
-class Person
+abstract class Person
 {
 
     protected $id;
