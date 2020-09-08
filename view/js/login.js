@@ -10,6 +10,7 @@ $('#connexion_connexion').click(function(e){
             password : $('#connexion_password').val()
         },
         function(data){
+            console.log(JSON.parse(data));
             if ( data == 1){
                 window.location = '../view/menu.php';
             }

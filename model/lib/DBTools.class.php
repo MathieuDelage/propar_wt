@@ -39,7 +39,7 @@ class DBTools
 
     public static function addOperation(String $comment, Int $typeOperation_id, Int $customers_id)
     {
-        $date_begin = new DateTime('2020-09-01', new DateTimeZone('Europe/Paris'));
+        $date_begin = new DateTime('now', new DateTimeZone('Europe/Paris'));
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("INSERT INTO operation (date_begin, comment, typeOperation_id, customers_id) VALUES ( :date_begin, :comment, :typeOperation_id, :customers_id)");
         $req->execute(array(
@@ -225,7 +225,7 @@ class DBTools
             return 'Login inexistant';
         } else {
             $db = Singleton::getInstance()->getConnection();
-            $req = $db->prepare("SELECT login, password FROM workers WHERE login = :login");
+            $req = $db->prepare("SELECT login, password  FROM workers WHERE login = :login");
             $req->execute(array(
                 ':login' => $login
             ));
@@ -353,5 +353,25 @@ class DBTools
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function getNbTasks(Int $id){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT count(*)
+            FROM operation 
+            WHERE workers_id = :id");
+        $req->execute(array(
+            ':id' => $id,
+        ));
+        return $req->fetch();
+    }
 
+    public static function searchLogin($login){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT count(*)
+            FROM workers 
+            WHERE login = :login");
+        $req->execute(array(
+            'login' => $login,
+        ));
+        return $req->fetch();
+    }
 }

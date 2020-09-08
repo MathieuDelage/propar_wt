@@ -1,11 +1,4 @@
 /*
- * Datatable
- */
-$('#currentTasks').ready( function () {
-    $('#currentTasks_datatable').DataTable();
-} );
-
-/*
  * Récupère les tâche sen cours
  */
 $.post(
@@ -14,7 +7,7 @@ $.post(
         let result = JSON.parse(data);
         console.log(result);
         result.forEach(function(element) {
-            $('#currentTasks_DT').append(
+            $('#current_tasks_DT').append(
                 "<tr>" +
                 "<th>"+
                 element.client +

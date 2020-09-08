@@ -1,5 +1,14 @@
 $(document).ready(function(){
     $.post(
+        '../ctrl/get_nbMyTasks.action.php',
+        function(data){
+            $("#take_operation_nbTasks").append(JSON.parse(data));
+        }
+    );
+})
+
+$(document).ready(function(){
+    $.post(
         '../ctrl/list_current_tasks_withoutWorkers.action.php',
         function(data){
             let operations = JSON.parse(data);

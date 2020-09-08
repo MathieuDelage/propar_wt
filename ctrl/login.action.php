@@ -13,6 +13,6 @@ if( isset($_POST['username']) && isset($_POST['password']) ){
     $_SESSION['surname'] = $userInfos[0]['surname'];
     $_SESSION['grade'] = $userInfos[0]['grade'];
 
-    echo 1;
+    echo json_encode(1);
 }
 ?>

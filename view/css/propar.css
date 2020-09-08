@@ -7,8 +7,8 @@
  *******************************************************************************/
 
  body {
-    direction: rtl;
-    text-align:right
+    direction: ltr;
+    text-align:left
 }
 
 dd {
