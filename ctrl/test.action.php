@@ -4,36 +4,37 @@ include_once '../model/lib/DBTools.class.php';
 // test addWorker()
 // OK
 // DBTools::addWorker('test','test','Expert','test','test');
-/*
-DBTools::addWorker('test','test','Expert','test','test');
-DBTools::addWorker('toto','tata','Senior','test2','test2');
-DBTools::addWorker('toto2','tata2','Apprenti','test3','test3');
-*/
+
+DBTools::addWorker('Mathieu','Delage','Expert','admin','admin');
+DBTools::addWorker('Théo','Blin','Senior','javascript','javascript');
+DBTools::addWorker('Esteban','Leroy','Apprenti','java','java');
+
 
 // test addCustomer()
 // OK
 // DBTools::addCustomer('Marie', 'Vigin','Semoule SA');
-/*
+
 DBTools::addCustomer('Marie', 'Vigin','Semoule SA');
 DBTools::addCustomer('Yann', 'André','Escroc SARL');
 DBTools::addCustomer('Thierry', 'Fauconnier',"Haussement d'épaules Inc");
-*/
+DBTools::addCustomer('Phanuel', 'Gadenne',"Debug SAS");
+
 
 // test AddTypeOperation()
 // OK
 // DBTools::addTypeOperation('Petite',1000);
-/*
+
 DBTools::addTypeOperation('Petite',1000);
 DBTools::addTypeOperation('Moyenne',2500);
 DBTools::addTypeOperation('Grosse',10000);
-*/
+
 
 // test AddOperation()
 // OK
 // DBTools::addOperation( $date, 'Ceci est un test !', '3','1');
-DBTools::addOperation( 'Ceci est un test !', '1','1');
-DBTools::addOperation( 'Ceci est un test !', '2','2');
-DBTools::addOperation( 'Ceci est un test !', '3','3');
+//DBTools::addOperation( 'Ceci est un test !', '1','1');
+//DBTools::addOperation( 'Ceci est un test !', '2','2');
+//DBTools::addOperation( 'Ceci est un test !', '3','3');
 
 // test updateWorker()
 // OK
