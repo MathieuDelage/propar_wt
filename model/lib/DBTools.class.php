@@ -315,7 +315,7 @@ class DBTools
         ));
     }
 
-    public static function displayMyOperations($id){
+    public static function displayMyOperations(Int $id){
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("SELECT operation.id, operation.date_begin, IFNULL(operation.date_end, 'En cours') AS date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
             FROM operation 
@@ -328,7 +328,7 @@ class DBTools
         return $req->fetchAll();
     }
 
-    public static function displayMyCurrentOperations($id){
+    public static function displayMyCurrentOperations(Int $id){
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
             FROM operation 
@@ -388,7 +388,7 @@ class DBTools
         }
     }
 
-    public static function typeOperationExist($type, $price){
+    public static function typeOperationExist(String $type, Float $price){
         $db = Singleton::getInstance()->getConnection();
         $req = $db->prepare("SELECT type, price
             FROM typeoperation 
