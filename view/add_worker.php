@@ -105,7 +105,7 @@ session_start();
                         </div>
 
                         <!-- Content Row -->
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center mt-5">
                             <form method="post" action ="../ctrl/add_worker.action.php">
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-3">
