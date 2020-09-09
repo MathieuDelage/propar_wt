@@ -21,13 +21,25 @@
   <component name="ChangeListManager">
     <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Person.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Person.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_customer.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_customer.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_typeOperation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_typeOperation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_worker.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/login.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/login.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/take_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/take_operation.action.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/lib/DBTools.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/lib/DBTools.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/display_myOperations.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/display_myOperations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/js/display_myOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/display_myOperations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/add_customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/add_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_operation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/add_typeOperation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_typeOperation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/add_worker.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_worker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/add_customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/add_customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/add_operation.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/add_operation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/add_typeOperation.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/add_typeOperation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/add_worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/add_worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/take_operation.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/take_operation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/terminate_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/terminate_operation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/take_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/take_operation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +91,8 @@
       <updated>1599219847216</updated>
       <workItem from="1599219848292" duration="8869000" />
       <workItem from="1599462808503" duration="22711000" />
-      <workItem from="1599548307174" duration="25663000" />
+      <workItem from="1599548307174" duration="25876000" />
+      <workItem from="1599634899195" duration="9186000" />
     </task>
     <servers />
   </component>
@@ -118,6 +131,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2715" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599567781239" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1599642303163">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599642303163" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599488747471">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

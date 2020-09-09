@@ -7,7 +7,13 @@ $('#add_typeOperation_submit').click(function(e){
             price : $('#add_typeOperation_price').val()
         },
         function(data){
-            $('#add_typeOperation_ok').append(JSON.parse((data)));
+            console.log(data);
+            if (data == "Type d'opération ajouté !") {
+                $('#add_typeOperation_ok').append(data);
+            } else {
+                $('#errorText').empty().append(data);
+                $('#errorModal').modal('show');
+            }
         }
     )
 })

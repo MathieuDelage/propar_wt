@@ -39,10 +39,19 @@ $('#take_operation_submit').click(function(){
     $.post(
         '../ctrl/take_operation.action.php',
         {
+            nb : $("#take_operation_nbTasks").children().val(),
             id_operation : $('#take_operation_select').find(":selected").val()
         },
         function(data){
-            $("#take_operation_ok").append(JSON.parse(data));
+            console.log(data);
+            if ( data == "Opération assignée !"){
+                $("#take_operation_ok").append(data);
+            } else {
+                $('#errorText').empty();
+                $('#errorText').append(data);
+                $('#errorModal').modal('show');
+            }
+
         }
     );
 })

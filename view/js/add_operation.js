@@ -30,7 +30,14 @@ $('#add_operation_submit').click(function(e){
             customers_id : $('#add_operation_clientChoice_select').find(":selected").val()
         },
         function(data){
-            $('#add_operation_ok').append(JSON.parse(data));
+            if (data == 'Tâche ajoutée !') {
+                $('#add_operation_ok').append(data);
+            } else {
+                $('#errorText').empty();
+                $('#errorText').append(data);
+                $('#errorModal').modal('show');
+            }
+
         }
     )
 })

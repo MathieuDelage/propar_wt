@@ -54,7 +54,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Formulaire</h6> -->
-                        <form method="post" action="login.php">
+                        <form method="post" action="../ctrl/login.action.php">
                             <div class="collapse-item">Identifiant :</div>
                             <div class="collapse-item"><input type="text" id="connexion_username" name="username"></div>
                             <div class="collapse-item">Mot de passe :</div>
@@ -151,6 +151,24 @@
                                             <div id="nbCustomers" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Erreur !</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="errorText" class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                                 </div>
                             </div>
                         </div>

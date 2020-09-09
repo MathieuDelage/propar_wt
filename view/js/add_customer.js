@@ -8,7 +8,13 @@ $('#add_customer_submit').click(function(e){
             company : $('#add_customer_company').val()
         },
         function(data){
-            $('#add_customer_ok').append(JSON.parse((data)));
+            if (data == 'Client crée !') {
+                $('#add_customer_ok').append(data);
+            } else {
+                $('#add_customer_errorText').empty();
+                $('#add_customer_errorText').append(data);
+                $('#add_customer_errorModal').modal('show');
+            }
         }
     )
 })

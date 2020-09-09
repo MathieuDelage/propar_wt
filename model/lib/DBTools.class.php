@@ -352,4 +352,57 @@ class DBTools
         return $req->fetch();
     }
 
+    public static function loginExist(String $login){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT login
+            FROM workers 
+            WHERE login = :login");
+        $req->execute(array(
+            ':login' => $login,
+        ));
+        $tmp = $req->fetch();
+        if ( $tmp[0] == $login){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    public static function customerExist(String $name, String $surname, String $company){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT name, surname, company
+            FROM customers 
+            WHERE company = :company 
+            AND name = :name 
+            AND surname = :surname");
+        $req->execute(array(
+            ':name' => $name,
+            ':surname' => $surname,
+            ':company' => $company,
+        ));
+        $tmp = $req->fetch();
+        if ( $tmp['name'] == $name && $tmp['surname'] == $surname && $tmp['company'] == $company){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    public static function typeOperationExist($type, $price){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT type, price
+            FROM typeoperation 
+            WHERE type = :type 
+            AND price = :price");
+        $req->execute(array(
+            ':type' => $type,
+            ':price' => $price,
+        ));
+        $tmp = $req->fetch();
+        if ( $tmp['type'] == $type && $tmp['price'] == $price){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
 }

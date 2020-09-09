@@ -8,11 +8,12 @@ $('#connexion_submit').click(function(e){
         },
         function(data){
             let result = data;
-            console.log(result);
             if ( result == 'Login'){
                 window.location = 'menu.php';
             } else {
-                alert('Erreur de saisie !');
+                $('#errorText').empty();
+                $('#errorText').append(data);
+                $('#errorModal').modal('show');
             }
         }
     )
