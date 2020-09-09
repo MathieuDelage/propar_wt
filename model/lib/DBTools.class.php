@@ -405,4 +405,21 @@ class DBTools
             return 0;
         }
     }
+
+    public static function getWorkers(){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT id, name, surname, grade FROM workers");
+        $req->execute(array(
+        ));
+        return $req->fetchAll();
+    }
+
+    public static function updateWokerGrade(Int $id, String $grade){
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("UPDATE workers SET grade = :newGrade WHERE id = :id");
+        $req->execute(array(
+            ':id' => $id,
+            ':newGrade' => $grade,
+        ));
+    }
 }

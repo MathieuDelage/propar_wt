@@ -13,7 +13,6 @@ session_start();
         <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet">
     </head>
-
     <body>
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -41,7 +40,6 @@ session_start();
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="menu.php">Retour au menu</a>
                         <a class="collapse-item" href="take_operation.php">Prendre une tâche</a>
                         <a class="collapse-item" href="display_myOperations.php">Voir mes opérations</a>
                         <a class="collapse-item" href="terminate_operation.php">Terminer une opération</a>
@@ -59,8 +57,8 @@ session_start();
                 echo "<div class='bg-white py-2 collapse-inner rounded'>";
                 echo "<a class='collapse-item' href='add_worker.php'>Ajouter un employé</a>";
                 echo "<a class='collapse-item' href='add_customer.php'>Ajouter un client</a>";
+                echo "<a class='collapse-item' href='add_typeOperation.php'>Ajouter un type d'opération</a>";
                 echo "<a class='collapse-item'href='add_operation.php'>Ajouter une tâche</a>";
-                echo "<a class='collapse-item'href='update_worker.action.php'>Changer le rôle</a>";
                 echo "</div>";
                 echo "</div>";
                 echo "</li>";
@@ -106,27 +104,28 @@ session_start();
 
                     <!-- Content Row -->
                     <div class="row justify-content-center">
-                        <form method="post" action ="../ctrl/add_typeOperation.action.php">
+                        <form method="post" action ="../ctrl/add_operation.action.php">
                             <div class="col">
                                 <div class="input-group input-group-sm mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Type d'opération :</span>
-                                    </div>
-                                    <input id="add_typeOperation_type" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <select id="update_worker_workerChoice_select">
+                                        <option value="0">-- Sélectionnez un employé --</option>
+                                    </select>
                                 </div>
                                 <div class="input-group input-group-sm mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Prix :</span>
-                                    </div>
-                                    <input id="add_typeOperation_price" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <select id="update_worker_gradeChoice_select">
+                                        <option value="0">-- Sélectionnez un rôle --</option>
+                                        <option value="1">Expert</option>
+                                        <option value="2">Senior</option>
+                                        <option value="3">Apprenti</option>
+                                    </select>
                                 </div>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" placeholder="Valider le formulaire :" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
-                                        <button id="add_typeOperation_submit" class="btn btn-outline-secondary" type="subit">Valider</button>
+                                        <button id="update_worker_submit" class="btn btn-outline-secondary" type="subit">Valider</button>
                                     </div>
                                 </div>
-                                <p><span id="add_typeOperation_ok"></span></p>
+                                <p><span id="update_worker_ok"></span></p>
                             </div>
                         </form>
                     </div>
@@ -158,6 +157,8 @@ session_start();
     </div>
     <!-- End of Page Wrapper -->
     </body>
+
+
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
@@ -166,7 +167,7 @@ session_start();
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/add_typeOperation.js"></script>
+    <script src="js/update_worker.js"></script>
     <script src="js/events.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -181,4 +182,5 @@ session_start();
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
 </html>
