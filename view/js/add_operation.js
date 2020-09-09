@@ -33,8 +33,7 @@ $('#add_operation_submit').click(function(e){
             if (data == 'Tâche ajoutée !') {
                 $('#add_operation_ok').append(data);
             } else {
-                $('#errorText').empty();
-                $('#errorText').append(data);
+                $('#errorText').empty().append(data);
                 $('#errorModal').modal('show');
             }
 
