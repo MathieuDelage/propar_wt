@@ -20,7 +20,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Accueil</div>
+            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Tâches terminées</div>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
