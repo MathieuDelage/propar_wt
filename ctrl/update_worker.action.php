@@ -14,7 +14,7 @@ if ( isset($_POST['id']) && !empty($_POST['id']) && isset($_POST['grade']) && !e
             $tmp = 'Apprenti';
             break;
     }
-    DBTools::updateWokerGrade($_POST['id'], $tmp);
+    DBTools::updateWorkerGrade($_POST['id'], $tmp);
     echo "Changement effectué !";
 } else {
     echo "Vous avez oublié de sélectionner un valeur !";
