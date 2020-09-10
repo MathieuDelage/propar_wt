@@ -20,21 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ctrl/assign_task.action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ctrl/nbTasks.action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assign_task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/js/assign_task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/lib/DBTools.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/lib/DBTools.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/add_customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/add_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/add_typeOperation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_typeOperation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/add_worker.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/add_worker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/display_myOperations.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/display_myOperations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/take_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/take_operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/terminate_operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/terminate_operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/update_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/update_worker.action.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +75,7 @@
       <workItem from="1599462808503" duration="22711000" />
       <workItem from="1599548307174" duration="25876000" />
       <workItem from="1599634899195" duration="19509000" />
-      <workItem from="1599722369818" duration="17933000" />
+      <workItem from="1599722369818" duration="19227000" />
     </task>
     <servers />
   </component>
