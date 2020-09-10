@@ -96,7 +96,7 @@ session_start();
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Vous êtes connecté sur votre espace,
                             <?php
-                            echo $_SESSION['name']." ".$_SESSION['surname']."<br>";
+                            echo $_SESSION['surname']." ".$_SESSION['name']."<br>";
                             echo "Employé ".$_SESSION['grade'];
                             ?>
                         </h1>

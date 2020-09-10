@@ -193,8 +193,7 @@ class DBTools
         $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
         $date = $date->format('Y-m-d');
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT sum(price) FROM typeoperation INNER JOIN operation ON operation.typeOperation_id = typeoperation.id WHERE date_end IS NOT NULL");
-        $req->execute();
+        $req = $db->query("CALL get_CA;");
         $result = $req->fetch();
         return $result[0];
     }
@@ -274,12 +273,12 @@ class DBTools
     public static function logIn(String $login, String $password)
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT login, password  FROM workers WHERE login = :login");
+        $req = $db->prepare("CALL get_login(:login);");
         $req->execute(array(
             ':login' => $login
         ));
-        $result = $req->fetchAll();
-        if ( $login == $result[0]['login'] && password_verify($password, $result[0]['password']) ){
+        $result = $req->fetch();
+        if ( $login == $result['login'] && password_verify($password, $result['password']) ){
             return 'Login';
         }
     }
@@ -393,7 +392,7 @@ class DBTools
     public static function takeOperation(Int $id, Int $workers_id)
     {
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("UPDATE operation SET workers_id = :workers_id WHERE id = :id");
+        $req = $db->prepare("CALL update_operationOwner(:id, :workers_id);");
         $req->execute(array(
             ':id' => $id,
             ':workers_id' => $workers_id
@@ -405,11 +404,7 @@ class DBTools
      */
     public static function displayMyOperations(Int $id){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT operation.id, operation.date_begin, IFNULL(operation.date_end, 'En cours') AS date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
-            FROM operation 
-            INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
-            INNER JOIN customers ON operation.customers_id = customers.id
-            WHERE workers_id = :id");
+        $req = $db->prepare("CALL get_workerTerminatedOperations(:id);");
         $req->execute(array(
             ':id' => $id,
         ));
@@ -421,11 +416,7 @@ class DBTools
      */
     public static function displayMyCurrentOperations(Int $id){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT operation.id, operation.date_begin, operation.date_end, operation.comment, CONCAT(customers.name,' ', customers.surname,', ', customers.company) AS client , typeoperation.type
-            FROM operation 
-            INNER JOIN typeoperation ON operation.typeOperation_id = typeoperation.id 
-            INNER JOIN customers ON operation.customers_id = customers.id
-            WHERE workers_id = :id AND operation.date_end IS NULL");
+        $req = $db->prepare("CALL get_workerOperations(:id);");
         $req->execute(array(
             ':id' => $id,
         ));

@@ -3,8 +3,6 @@ session_start();
 
 include_once '../model/lib/DBTools.class.php';
 
-//echo DBTools::logIn('test', 'test');
-
 if( isset($_POST['username']) && !empty($_POST['username'])
     && isset($_POST['password']) && !empty($_POST['password']) ){
     $result = DBTools::logIn($_POST['username'], $_POST['password']);
@@ -21,5 +19,3 @@ if( isset($_POST['username']) && !empty($_POST['username'])
 } else {
     echo "Vous avez oublié de remplir des champs !";
 }
-
-?>
