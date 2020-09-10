@@ -21,7 +21,7 @@ session_start();
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Terminer une tâche</div>
+            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Assigner une tâche</div>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -43,7 +43,8 @@ session_start();
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="menu.php">Retour au menu</a>
                         <a class="collapse-item" href="take_operation.php">Prendre une tâche</a>
-                        <a class="collapse-item" href="display_myOperations.php">Voir mes tâches</a>
+                        <a class="collapse-item" href="display_myOperations.php">Voir mes tâche</a>
+                        <a class="collapse-item" href="terminate_operation.php">Terminer une tâche</a>
                     </div>
                 </div>
             </li>
@@ -56,11 +57,10 @@ session_start();
                 echo "</a>";
                 echo "<div id='collapseTwo' class='collapse' aria-labelledby='headingTwo' data-parent='#accordionSidebar'>";
                 echo "<div class='bg-white py-2 collapse-inner rounded'>";
-                echo "<a class='collapse-item' href='add_worker.php'>Ajouter un employé</a>";
+                echo "<a class='collapse-item'href='add_worker.php'>Ajouter un employé</a>";
                 echo "<a class='collapse-item' href='add_customer.php'>Ajouter un client</a>";
                 echo "<a class='collapse-item' href='add_typeOperation.php'>Ajouter un type de tâche</a>";
-                echo "<a class='collapse-item'href='add_operation.php'>Ajouter une tâche</a>";
-                echo "<a class='collapse-item'href='assign_task.php'>Assigner une tâche</a>";
+                echo "<a class='collapse-item'href='update_worker.action.php'>Changer le rôle</a>";
                 echo "</div>";
                 echo "</div>";
                 echo "</li>";
@@ -68,7 +68,6 @@ session_start();
             ?>
 
             <li class="nav-item">
-
                 <a class="nav-link" href="">
                     <span id="deconnexion">Deconnexion</span>
                 </a>
@@ -106,23 +105,58 @@ session_start();
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row justify-content-md-center align-items-center">
-                        <div class="col align-self-center">
-                            <select id="terminate_operation_select">
-                                <option>-- Sélectionnez une opération --</option>
-                            </select>
-                        </div>
-                        <div class=col align-self-end">
-                        <input id="terminate_operation_submit" type="submit" value="Cloturer tâche"><br>
-                        <p><span id="terminate_operation_ok"></span></p>
+                    <div class="row justify-content-center mt-5">
+                        <form method="post" action ="../ctrl/assign_task.action.php ">
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <select id="assign_task_select_operation">
+                                            <option value="0">-- Sélectionnez l'opération --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <strong>Client :</strong> <span id="assign_task_customer"></span><br>
+                                        <strong>Commentaire :</strong> <span id="assign_task_comment"></span><br>
+                                        <strong>Type d'opération :</strong> <span id="assign_task_typeoperation"></span><br>
+                                        <strong>Date d'enregistrement :</strong> <span id="assign_task_dateBegin"></span><br>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <select value="0" id="assign_task_select_worker">
+                                            <option>-- Sélectionnez l'employé' --</option>
+                                        </select>
+                                        <p>Il peut encore se voir assigner <span id="assign_task_test"></span> tâches.</p>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Valider le formulaire :" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button id="assign_task_submit" class="btn btn-outline-secondary" type="subit">Valider</button>
+                                    </div>
+                                </div>
+                                <p><span id="assign_task_ok"></span></p>
+                            </div>
+                        </form>
                     </div>
-                        <div class="col align-self-start">
-                            <p>
-                                Client : <span id="terminate_operation_customer"></span><br>
-                                Commentaire : <span id="terminate_operation_comment"></span><br>
-                                Type d'opération : <span id="terminate_operation_typeoperation"></span><br>
-                                Date d'enregistrement : <span id="terminate_operation_dateBegin"></span><br>
-                            </p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Erreur !</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="errorText" class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,9 +168,7 @@ session_start();
 
     </div>
     <!-- End of Page Wrapper -->
-
-    </body>
-    <!-- JQuery -->
+    </body><!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
     <!-- Bootstrap core JavaScript-->
@@ -144,7 +176,7 @@ session_start();
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/terminate_operation.js"></script>
+    <script src="js/assign_task.js"></script>
     <script src="js/events.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -160,4 +192,3 @@ session_start();
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 </html>
-

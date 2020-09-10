@@ -515,4 +515,22 @@ class DBTools
             ':grade' => $grade,
         ));
     }
+
+    /*
+     * Fonction pour récupérer le grade de l'employé
+     */
+    public static function getUserGrade($id)
+    {
+        $db = Singleton::getInstance()->getConnection();
+        $req = $db->prepare("SELECT grade FROM workers WHERE id = :id");
+        $req->execute(array(
+            ':id' => $id
+        ));
+        $tmp = $req->fetch();
+        return $tmp[0];
+    }
+
+    /*
+     * Fonction pour assigner
+     */
 }

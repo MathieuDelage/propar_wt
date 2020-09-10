@@ -61,6 +61,7 @@ session_start();
                     echo "<a class='collapse-item' href='add_customer.php'>Ajouter un client</a>";
                     echo "<a class='collapse-item' href='add_typeOperation.php'>Ajouter un type de tâche</a>";
                     echo "<a class='collapse-item'href='update_worker.action.php'>Changer le rôle</a>";
+                    echo "<a class='collapse-item'href='assign_task.php'>Assigner une tâche</a>";
                     echo "</div>";
                     echo "</div>";
                     echo "</li>";
