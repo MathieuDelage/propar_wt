@@ -21,8 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ctrl/update_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/update_worker.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_nbMyTasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_nbMyTasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/take_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/take_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/test.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/test.action.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/lib/DBTools.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/lib/DBTools.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/display_current_tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/display_current_tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/take_operation.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/take_operation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,7 @@
       <workItem from="1599462808503" duration="22711000" />
       <workItem from="1599548307174" duration="25876000" />
       <workItem from="1599634899195" duration="19509000" />
-      <workItem from="1599722369818" duration="5643000" />
+      <workItem from="1599722369818" duration="8853000" />
     </task>
     <servers />
   </component>

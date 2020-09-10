@@ -5,19 +5,19 @@ include_once '../model/lib/DBTools.class.php';
 // OK
 // DBTools::addWorker('test','test','Expert','test','test');
 
-DBTools::addWorker('Mathieu','Delage','Expert','admin','admin');
-DBTools::addWorker('Théo','Blin','Senior','javascript','javascript');
-DBTools::addWorker('Esteban','Leroy','Apprenti','java','java');
+DBTools::addWorker('Delage','Mathieu','Expert','admin','admin');
+DBTools::addWorker('Blin','Théo','Senior','javascript','javascript');
+DBTools::addWorker('Leroy','Esteban','Apprenti','java','java');
 
 
 // test addCustomer()
 // OK
 // DBTools::addCustomer('Marie', 'Vigin','Semoule SA');
 
-DBTools::addCustomer('Marie', 'Vigin','Semoule SA');
-DBTools::addCustomer('Yann', 'André','Escroc SARL');
-DBTools::addCustomer('Thierry', 'Fauconnier',"Haussement d'épaules Inc");
-DBTools::addCustomer('Phanuel', 'Gadenne',"Debug SAS");
+DBTools::addCustomer('Vigin', 'Marie','Semoule SA');
+DBTools::addCustomer('André', 'Yann','Escroc SARL');
+DBTools::addCustomer('Fauconnier', 'Thierry',"Haussement d'épaules Inc");
+DBTools::addCustomer('Gadenne', 'Phanuel',"Debug SAS");
 
 
 // test AddTypeOperation()

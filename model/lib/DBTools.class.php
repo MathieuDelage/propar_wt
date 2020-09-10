@@ -437,9 +437,10 @@ class DBTools
      */
     public static function getNbTasks(Int $id){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT count(*)
+        $req = $db->prepare("CALL get_nbTasks(:id);");
+        /*$req = $db->prepare("SELECT count(*)
             FROM operation 
-            WHERE workers_id = :id AND date_end IS NULL");
+            WHERE workers_id = :id AND date_end IS NULL");*/
         $req->execute(array(
             ':id' => $id,
         ));
@@ -451,9 +452,10 @@ class DBTools
      */
     public static function loginExist(String $login){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT login
+        $req = $db->prepare("CALL get_login_ifexist(:login);");
+        /*$req = $db->prepare("SELECT login
             FROM workers 
-            WHERE login = :login");
+            WHERE login = :login");*/
         $req->execute(array(
             ':login' => $login,
         ));
@@ -470,11 +472,7 @@ class DBTools
      */
     public static function customerExist(String $name, String $surname, String $company){
         $db = Singleton::getInstance()->getConnection();
-        $req = $db->prepare("SELECT name, surname, company
-            FROM customers 
-            WHERE company = :company 
-            AND name = :name 
-            AND surname = :surname");
+        $req = $db->prepare("CALL get_customer_ifexist(:company, :name, :surname);");
         $req->execute(array(
             ':name' => $name,
             ':surname' => $surname,
