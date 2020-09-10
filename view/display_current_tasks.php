@@ -44,7 +44,7 @@ session_start();
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Retour à l'accueil :</h6>
                         <a class="collapse-item" href="index.php">Accueil</a>
-                        <h6 class="collapse-header">Opération :</h6>
+                        <h6 class="collapse-header">Tâches :</h6>
                         <a class="collapse-item" href="display_terminated_tasks.php">Terminées</a>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ session_start();
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Ajouter une opération</div>
+                <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Ajouter une tâche</div>
 
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
@@ -43,8 +43,8 @@ session_start();
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" href="menu.php">Retour au menu</a>
                             <a class="collapse-item" href="take_operation.php">Prendre une tâche</a>
-                            <a class="collapse-item" href="display_myOperations.php">Voir mes opérations</a>
-                            <a class="collapse-item" href="terminate_operation.php">Terminer une opération</a>
+                            <a class="collapse-item" href="display_myOperations.php">Voir mes tâche</a>
+                            <a class="collapse-item" href="terminate_operation.php">Terminer une tâche</a>
                         </div>
                     </div>
                 </li>
@@ -59,7 +59,7 @@ session_start();
                     echo "<div class='bg-white py-2 collapse-inner rounded'>";
                     echo "<a class='collapse-item'href='add_worker.php'>Ajouter un employé</a>";
                     echo "<a class='collapse-item' href='add_customer.php'>Ajouter un client</a>";
-                    echo "<a class='collapse-item' href='add_typeOperation.php'>Ajouter un type d'opération</a>";
+                    echo "<a class='collapse-item' href='add_typeOperation.php'>Ajouter un type de tâche</a>";
                     echo "<a class='collapse-item'href='update_worker.action.php'>Changer le rôle</a>";
                     echo "</div>";
                     echo "</div>";

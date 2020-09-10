@@ -21,7 +21,7 @@ session_start();
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Ajouter un type d'opération</div>
+            <div class="sidebar-brand d-flex align-items-center justify-content-center sidebar-brand-text mx-3">Ajouter un type de tâche</div>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -43,8 +43,8 @@ session_start();
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="menu.php">Retour au menu</a>
                         <a class="collapse-item" href="take_operation.php">Prendre une tâche</a>
-                        <a class="collapse-item" href="display_myOperations.php">Voir mes opérations</a>
-                        <a class="collapse-item" href="terminate_operation.php">Terminer une opération</a>
+                        <a class="collapse-item" href="display_myOperations.php">Voir mes tâches</a>
+                        <a class="collapse-item" href="terminate_operation.php">Terminer une tâche</a>
                     </div>
                 </div>
             </li>

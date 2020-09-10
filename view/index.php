@@ -39,7 +39,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Opération :</h6>
+                        <h6 class="collapse-header">Tâches :</h6>
                         <a class="collapse-item" href="display_current_tasks.php">En cours</a>
                         <a class="collapse-item" href="display_terminated_tasks.php">Terminées</a>
                     </div>
