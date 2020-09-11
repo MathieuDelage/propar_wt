@@ -530,7 +530,4 @@ class DBTools
         return $tmp[0];
     }
 
-    /*
-     * Fonction pour assigner
-     */
 }
