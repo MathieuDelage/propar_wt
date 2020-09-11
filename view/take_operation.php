@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +73,8 @@ session_start();
 
             <li class="nav-item">
 
-                <a class="nav-link" href="">
-                    <span id="deconnexion">Deconnexion</span>
+                <a class="nav-link" href="" id="deconnexion">
+                    <span>Deconnexion</span>
                 </a>
             </li>
         </ul>
