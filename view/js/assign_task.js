@@ -10,6 +10,18 @@ $(document).ready(function(){
     );
 })
 
+$(document).ready(function(){
+    $.post(
+        '../ctrl/get_worker.action.php',
+        function(data){
+            let worker = JSON.parse(data);
+            for(let i = 0; i < worker.length; i++){
+                $("#assign_task_select_worker").append($('<option>').val(worker[i]['id']).text(worker[i]['name'] + ' ' + worker[i]['surname'] + ', ' + worker[i]['grade']));
+            }
+        }
+    );
+})
+
 $('#assign_task_select_operation').change(function() {
     $.post(
         '../ctrl/get_operation.action.php',
@@ -22,18 +34,6 @@ $('#assign_task_select_operation').change(function() {
             $("#assign_task_comment").empty().empty().append(operation[0]['comment']);
             $("#assign_task_typeoperation").empty().append(operation[0]['type']);
             $("#assign_task_dateBegin").empty().append(operation[0]['date_begin']);
-        }
-    );
-})
-
-$(document).ready(function(){
-    $.post(
-        '../ctrl/get_worker.action.php',
-        function(data){
-            let worker = JSON.parse(data);
-            for(let i = 0; i < worker.length; i++){
-                $("#assign_task_select_worker").append($('<option>').val(worker[i]['id']).text(worker[i]['name'] + ' ' + worker[i]['surname'] + ', ' + worker[i]['grade']));
-            }
         }
     );
 })
