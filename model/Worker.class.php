@@ -1,5 +1,6 @@
 <?php
 
+require_once 'Person.class.php';
 
 class Worker extends Person
 {
