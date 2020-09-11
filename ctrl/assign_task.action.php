@@ -1,9 +1,8 @@
 <?php
+include '../model/lib/DBTools.class.php';
+
 session_start();
 
-
-
-include '../model/lib/DBTools.class.php';
 if ( isset($_POST['id_task']) && !empty($_POST['id_task'])
     && isset($_POST['id_worker']) && !empty($_POST['id_worker'])
     && $_POST['id_worker'] != 0 && $_POST['id_task'] != 0){
