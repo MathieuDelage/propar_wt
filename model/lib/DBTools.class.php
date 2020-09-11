@@ -216,7 +216,7 @@ class DBTools
     }
 
     /*
-     * Fonction pou récupérer les tâches en cours non affectées
+     * Fonction pour récupérer les tâches en cours non affectées
      */
     public static function viewCurrentOperationsWithoutWorker()
     {

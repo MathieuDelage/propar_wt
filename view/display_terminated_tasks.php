@@ -169,7 +169,4 @@
     <!-- Custom JS -->
     <script src="js/display_terminated_tasks.js"></script>
     <script src="js/events.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
 </html>
