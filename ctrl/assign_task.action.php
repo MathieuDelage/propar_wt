@@ -11,7 +11,7 @@ if ( isset($_POST['id_task']) && !empty($_POST['id_task'])
 } else if ( $_POST['id_worker'] == 0 && $_POST['id_task'] != 0) {
     echo "Vous n'avez pas sélectionné de travailleur !";
 } else if ( $_POST['id_task'] == 0 && $_POST['id_worker'] != 0){
-    echo "Vous n'avez pas sélectionné une tâche !";
+    echo "Vous n'avez pas sélectionné de tâche !";
 } else {
     echo "Vous n'avez rien sélectionné !";
 }
