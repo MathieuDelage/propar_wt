@@ -21,7 +21,34 @@
   <component name="ChangeListManager">
     <list default="true" id="e3bbccdc-1df3-4e83-b042-67f9ec3698ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_customer.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_customer.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_typeOperation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_typeOperation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/add_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/add_worker.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/assign_task.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/assign_task.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/display_ca.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/display_ca.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/display_myCurrentOperations.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/display_myCurrentOperations.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/display_myOperations.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/display_myOperations.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_customers.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_customers.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_nbMyTasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_nbMyTasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_typeOperation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_typeOperation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/get_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/get_worker.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/list_current_tasks_withWorkers.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/list_current_tasks_withWorkers.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/list_current_tasks_withoutWorkers.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/list_current_tasks_withoutWorkers.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/list_terminated_tasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/list_terminated_tasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/login.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/login.action.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ctrl/logout.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/logout.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/nbTasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/nbTasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/nb_current_tasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/nb_current_tasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/nb_customers.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/nb_customers.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/nb_terminated_tasks.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/nb_terminated_tasks.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/nb_workers.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/nb_workers.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/search_login.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/search_login.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/take_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/take_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/terminate_operation.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/terminate_operation.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/update_worker.action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/update_worker.action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +105,7 @@
       <workItem from="1599634899195" duration="19509000" />
       <workItem from="1599722369818" duration="19236000" />
       <workItem from="1599806229358" duration="2917000" />
-      <workItem from="1599810022248" duration="1221000" />
+      <workItem from="1599810022248" duration="2675000" />
     </task>
     <servers />
   </component>

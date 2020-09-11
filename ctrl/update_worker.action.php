@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
+    header("Location: ../view/index.php");
+}
 include_once '../model/lib/DBTools.class.php';
 
 if ( isset($_POST['id']) && !empty($_POST['id']) && isset($_POST['grade']) && !empty($_POST['grade']

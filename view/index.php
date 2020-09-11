@@ -190,10 +190,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JS -->
-    <script src="js/index.js"></script>
-    <script src="js/events.js"></script>
-
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -207,6 +203,8 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
-
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
 
 </html>
