@@ -1,11 +1,7 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
-    header("Location: ../view/index.php");
-}
 
 include_once '../model/lib/DBTools.class.php';
+session_start();
 
 if( isset($_POST['username']) && !empty($_POST['username'])
     && isset($_POST['password']) && !empty($_POST['password']) ){

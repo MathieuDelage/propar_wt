@@ -9,7 +9,7 @@ $('#connexion_submit').click(function(e){
         function(data){
             let result = data;
             if ( result == 'Login'){
-                window.location = 'menu.php';
+                window.location = '../view/menu.php';
             } else {
                 $('#errorText').empty();
                 $('#errorText').append(data);

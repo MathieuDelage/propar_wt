@@ -196,6 +196,10 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
+
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
@@ -203,8 +207,6 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
-    <!-- Custom JS -->
-    <script src="js/index.js"></script>
-    <script src="js/events.js"></script>
+
 
 </html>

@@ -1,6 +1,6 @@
 /*
- * requête AJAX pour le login
- */
+* requête AJAX pour le login
+*/
 $('#connexion_connexion').click(function(e){
     e.preventDefault();
     $.post(
